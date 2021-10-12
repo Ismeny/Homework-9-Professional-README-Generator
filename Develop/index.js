@@ -49,7 +49,7 @@ const questions = [
       {
         type: 'input',
         message: 'Please list any contributors',
-        name: 'contributing',
+        name: 'contributors',
       },
       {
         type: 'input',
@@ -62,8 +62,16 @@ const questions = [
         name: 'questions',
       },
   ])
-  .then((response) =>
-    console.log(response)
+  .then((response) => {
+    console.log(response.title);
+    console.log(response.description);
+    console.log(response.installation);
+    console.log(response.usage);
+    console.log(response.license);
+    console.log(response.contributing);
+    console.log(response.tests);
+    console.log(response.questions);
+  }
   )
 ];
 
