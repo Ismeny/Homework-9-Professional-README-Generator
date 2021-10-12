@@ -62,15 +62,16 @@ const questions = [
         name: 'questions',
       },
   ])
-  .then((response) => {
-    console.log(response.title);
-    console.log(response.description);
-    console.log(response.installation);
-    console.log(response.usage);
-    console.log(response.license);
-    console.log(response.contributing);
-    console.log(response.tests);
-    console.log(response.questions);
+  .then((data) => {
+    console.log(data);
+    console.log(data.title);
+    console.log(data.description);
+    console.log(data.installation);
+    console.log(data.usage);
+    console.log(data.license);
+    console.log(data.contributors);
+    console.log(data.tests);
+    console.log(data.questions);
   }
   )
 ];
