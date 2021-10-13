@@ -25,3 +25,4 @@ function generateMarkdown(data) {
 
 module.exports = generateMarkdown;
 
+console.log(generateMarkdown)

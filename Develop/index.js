@@ -65,27 +65,37 @@ const questions = [
   ])
   .then((data) => {
     console.log(data)
+    let title = data.title
     console.log(data.title);
+    let description = data.description
     console.log(data.description);
+    let installation = data.installation
     console.log(data.installation);
+    let usage = data.usage
     console.log(data.usage);
+    let license = data.license
     console.log(data.license);
+    let contributors = data.contributors
     console.log(data.contributors);
+    let tests = data.tests
     console.log(data.tests);
+    let questions = data.questions
     console.log(data.questions);
+
+   
   }
   )
 ];
 
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    const fs = require('fs');
+// function writeToFile(fileName, data) {
+//     const fs = require('fs');
 
-    fs.writeFile('log.txt', process.argv[3], (err) =>
-  err ? console.error(err) : console.log('Success!')
-);
-}
+//     fs.writeFile('log.txt', process.argv[3], (err) =>
+//   err ? console.error(err) : console.log('Success!')
+// );
+// }
 
 // TODO: Create a function to initialize app
 function init() {}
