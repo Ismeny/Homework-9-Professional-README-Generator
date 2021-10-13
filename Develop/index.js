@@ -91,36 +91,45 @@ const questions = [
   // }
 //)
   .then((data) => {
-    // const filename = `${data.name.toLowerCase().split(' ').join('')}.json`;
-  
     fs.writeFile("README.md", generateMarkdown(data), (err) =>
-      err ? console.log(err) : console.log('Success!')
+      err ? console.log(err) : console.log('Congratulations! You have succesfully created a README.md for your project!')
     );
   })
 ];
 
 function generateMarkdown(data) {
-  return `# ${data.title}
-  ##  ${data.description}
+  return `
+  # ${data.title}
+
+  ## Description
+  ${data.description}
+
   ## Table of contents
   - [Installation](#installation)
   - [Usage](#usage)
   - [Contributors](#contributors)
   - [License](#license)
+
   ## Installation
   ${data.installation}
+
   ## Usage
   ${data.usage}
+
   ## Credits
   ${data.credits}
+
   ## License
   ${data.license}
-  ##Contributions
+
+  ## Contributions
   ${data.contributors}
+
   ## Test
   ${data.tests}
+  
   ## Questions
-  If you have any questions or suggestions please reach out to me via email @ ${data.questions} .
+  If you have any questions or suggestions please reach out to me via email @ ${data.questions} 
 `;
 }
 
@@ -128,8 +137,7 @@ function generateMarkdown(data) {
 
 // TODO: Create a function to write README file
 // function writeToFile(fileName, data) {
-//     fs.writeFile('log.txt', process.argv[3], (err) =>
-//   err ? console.error(err) : console.log('Success!')
+
 // );
 // }
 
