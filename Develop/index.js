@@ -1,6 +1,6 @@
 // TODO: Include packages needed for this application
-//const readMeGen = require('./generateMarkdown');
 
+const fs = require('fs');
 const inquirer = require('inquirer');
 // TODO: Create an array of questions for user input
 const questions = [
@@ -25,6 +25,11 @@ const questions = [
         type: 'input',
         message: 'Please explain how to use your project:',
         name: 'usage',
+      },
+      {
+        type: 'input',
+        message: 'Please list any frameworks used and / or anyone you would like to credit',
+        name: 'credits',
       },
       {
         type: 'list',
@@ -63,44 +68,75 @@ const questions = [
         name: 'questions',
       },
   ])
+  // .then((data) => {
+  //   console.log(data)
+  //   let title = data.title
+  //   console.log(data.title);
+  //   let description = data.description
+  //   console.log(data.description);
+  //   let installation = data.installation
+  //   console.log(data.installation);
+  //   let usage = data.usage
+  //   console.log(data.usage);
+  //   let credits = data.credits
+  //   console.log(data.credits)
+  //   let license = data.license
+  //   console.log(data.license);
+  //   let contributors = data.contributors
+  //   console.log(data.contributors);
+  //   let tests = data.tests
+  //   console.log(data.tests);
+  //   let questions = data.questions
+  //   console.log(data.questions);
+  // }
+//)
   .then((data) => {
-    console.log(data)
-    let title = data.title
-    console.log(data.title);
-    let description = data.description
-    console.log(data.description);
-    let installation = data.installation
-    console.log(data.installation);
-    let usage = data.usage
-    console.log(data.usage);
-    let license = data.license
-    console.log(data.license);
-    let contributors = data.contributors
-    console.log(data.contributors);
-    let tests = data.tests
-    console.log(data.tests);
-    let questions = data.questions
-    console.log(data.questions);
-
-   
-  }
-  )
+    // const filename = `${data.name.toLowerCase().split(' ').join('')}.json`;
+  
+    fs.writeFile("README.md", generateMarkdown(data), (err) =>
+      err ? console.log(err) : console.log('Success!')
+    );
+  })
 ];
+
+function generateMarkdown(data) {
+  return `# ${data.title}
+  ##  ${data.description}
+  ## Table of contents
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Contributors](#contributors)
+  - [License](#license)
+  ## Installation
+  ${data.installation}
+  ## Usage
+  ${data.usage}
+  ## Credits
+  ${data.credits}
+  ## License
+  ${data.license}
+  ##Contributions
+  ${data.contributors}
+  ## Test
+  ${data.tests}
+  ## Questions
+  If you have any questions or suggestions please reach out to me via email @ ${data.questions} .
+`;
+}
+
 
 
 // TODO: Create a function to write README file
 // function writeToFile(fileName, data) {
-//     const fs = require('fs');
-
 //     fs.writeFile('log.txt', process.argv[3], (err) =>
 //   err ? console.error(err) : console.log('Success!')
 // );
 // }
 
 // TODO: Create a function to initialize app
-function init() {}
+//function init() {}
 
 // Function call to initialize app
-init();
+//init();
 
 
