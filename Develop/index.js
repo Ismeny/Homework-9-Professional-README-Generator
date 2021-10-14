@@ -1,7 +1,6 @@
-// TODO: Include packages needed for this application
-
-const fs = require('fs');
+// TInclude packages needed for this application
 const inquirer = require('inquirer');
+const fs = require('fs');
 // TODO: Create an array of questions for user input
 const questions = [
     inquirer
@@ -68,29 +67,19 @@ const questions = [
         name: 'questions',
       },
   ])
-  // .then((data) => {
-  //   console.log(data)
-  //   let title = data.title
-  //   console.log(data.title);
-  //   let description = data.description
-  //   console.log(data.description);
-  //   let installation = data.installation
-  //   console.log(data.installation);
-  //   let usage = data.usage
-  //   console.log(data.usage);
-  //   let credits = data.credits
-  //   console.log(data.credits)
-  //   let license = data.license
-  //   console.log(data.license);
-  //   let contributors = data.contributors
-  //   console.log(data.contributors);
-  //   let tests = data.tests
-  //   console.log(data.tests);
-  //   let questions = data.questions
-  //   console.log(data.questions);
-  // }
-//)
+ 
   .then((data) => {
+    console.log(data);
+    console.log(data.title);
+    console.log(data.description);
+    console.log(data.installation);
+    console.log(data.usage);
+    console.log(data.credits)
+    console.log(data.license);
+    console.log(data.contributors);
+    console.log(data.tests);
+    console.log(data.questions);
+  
     fs.writeFile("README.md", generateMarkdown(data), (err) =>
       err ? console.log(err) : console.log('Congratulations! You have succesfully created a README.md for your project!')
     );
@@ -127,24 +116,21 @@ function generateMarkdown(data) {
 
   ## Test
   ${data.tests}
-  
+
   ## Questions
-  If you have any questions or suggestions please reach out to me via email @ ${data.questions} 
+  If you have any questions or suggestions please reach out to me via email ${data.questions} 
 `;
 }
 
 
 
 // TODO: Create a function to write README file
-// function writeToFile(fileName, data) {
-
-// );
-// }
+function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
-//function init() {}
+function init() {}
 
 // Function call to initialize app
-//init();
+init();
 
 
