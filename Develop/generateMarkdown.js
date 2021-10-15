@@ -78,12 +78,13 @@ function renderLicenseBadge(license) {
     renderLicenseSection(data.license);
     let badge = renderLicenseBadge(data.license)
     let link = renderLicenseLink(data.license);
-    let selection = renderLicenseSection(data.license);
+    let section = renderLicenseSection(data.license);
     
     return `
   # ${data.title}
+  
+  
   ![License](${badge})
-
 
 
   ## Description 
@@ -105,7 +106,7 @@ function renderLicenseBadge(license) {
   ${data.credits}
 
   ## License
-  ${selection} <br>
+  ${section} <br>
   ***${link}***
  
 
