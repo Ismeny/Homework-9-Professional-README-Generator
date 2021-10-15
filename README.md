@@ -1,36 +1,42 @@
 # Homework-9-Professional-README-Generator
 
+
 ## Description
-This project is a weather dashboard that allows you to search any city in the United States and get the current and 5 day weather forecast. This project uses local storage so the user is able to click refresh the page and see their previous search history. If the user clicks on the search history it will pull up the current weather information for that city again. 
+The purpose of this project is to generate a README.md after the user is prompted with a series of questions that make up the contents of a proffesional README.md. This project is built using Node.js and is initialized in the integrated terminal in Visual Studio Code. 
 
 
-### Table of Contents 
-* Installation
-* Usage
-* Credits
-* License
-* Contributions
-* Test
+## Table of contents
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Credits](#credits)
+  - [License](#license)
+  - [Test](#test)
+  - [Questions](#questions)
+  
 
 ## Installation
-Go to URL : ***https://ismeny.github.io/Homework-6-Server-Side-APIs-Weather-Dashboard/***
+Video link  : ******
 
-![Screenshot](assets/images/weatherdashboard.png)
+![Screenshot]()
 
 
 ## Usage
-Go to URL and search any city in the United States. When you click submit the current weather and 5 day weather forecast will populate. You can search another city and the information for that city will then come up and you will begin to see city names in your saved searches. You can then go back and forth between the saved searches to view their weather without having to re-type the city name. If you leave the page or refresh you will still be able to come back to your saved searches. 
+Open terminal and run command line "node index.js". You will then be prompted with a series of questions asking for user input. After all questions are answered the user will receive a message letting them knkow that the README.md has been created. The user input is then taken and used to quickly create a professional README.md. for a new project. 
+
 
 
 ## Credits
+Uses the Inquierer Package <br>
 Received help from: 
 * Jayla De'nae - peer
 * Damien Luzzo - peer 
 * Stephanie Cortez - peer
 * Ethan Cho - peer
 
+
+
 ## License
-MIT
+MIT Licensce
 
 ## Contributions
 n/a
