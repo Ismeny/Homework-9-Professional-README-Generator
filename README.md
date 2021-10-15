@@ -15,9 +15,9 @@ The purpose of this project is to generate a README.md after the user is prompte
   
 
 ## Installation
-Video link  : ******
+Video link  : ***https://watch.screencastify.com/v/Q3jKwmKSCBJaAoN5M769***
 
-![Screenshot]()
+![Screenshot](screenshot.png)
 
 
 ## Usage
